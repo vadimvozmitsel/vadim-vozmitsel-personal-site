@@ -1,0 +1,286 @@
+/********** 
+ 6. Hero Styles 
+**********/
+.hero {
+  position: relative;
+  background: linear-gradient(239.24deg, #f4f7fe 22.34%, #fbfcff 83.1%);
+  @include media-breakpoint-down-md {
+    overflow: hidden;
+  }
+  &-shape-wrapper {
+    overflow: hidden;
+    bottom: 0%;
+    .shape-1,
+    .shape-2,
+    .shape-3,
+    .shape-4 {
+      position: absolute;
+      border-radius: 50%;
+      top: -40%;
+      width: 686px;
+      height: 686px;
+      right: 15%;
+      mix-blend-mode: multiply;
+      background: #fffbda;
+      filter: blur(60px);
+      @include media-breakpoint-down-xxl {
+        right: -5%;
+      }
+      @include media-breakpoint-down-lg {
+        right: 10%;
+        top: -30%;
+      }
+      @include media-breakpoint-down-md {
+        right: -18%;
+        top: 30%;
+      }
+    }
+    .shape-2 {
+      top: 31%;
+      left: 50%;
+      width: 418px;
+      height: 418px;
+      background: #85fff8;
+      opacity: 0.7;
+      @include media-breakpoint-down-xxl {
+        left: 45%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 10%;
+        top: 60%;
+      }
+      @include media-breakpoint-down-md {
+        left: 5%;
+      }
+      @include media-breakpoint-down-sm {
+        left: 0%;
+      }
+    }
+    .shape-3 {
+      top: 0%;
+      right: -10%;
+      width: 418px;
+      height: 418px;
+      background: #cdf6ff;
+      @include media-breakpoint-down-lg {
+        right: -20%;
+      }
+      @include media-breakpoint-down-md {
+        right: -30%;
+      }
+    }
+    .shape-4 {
+      top: -30%;
+      left: -10%;
+      opacity: 0.5;
+      background: #b9ffe2;
+      @include media-breakpoint-down-xxl {
+        top: -42%;
+        left: -25%;
+      }
+      @include media-breakpoint-down-lg {
+        top: -27%;
+        left: -50%;
+      }
+      @include media-breakpoint-down-md {
+        top: -30%;
+        left: -63%;
+      }
+    }
+  }
+  &-banner-wraper {
+    bottom: 0%;
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      top: 20%;
+      right: 15%;
+      width: 629px;
+      height: 630px;
+      background: #9785ff;
+      filter: blur(60px);
+      mix-blend-mode: multiply;
+      opacity: 0.8;
+      @include media-breakpoint-down-xxl {
+        right: 5%;
+        top: 15%;
+      }
+      @include media-breakpoint-down-xl {
+        right: 0%;
+        top: 10%;
+      }
+      @include media-breakpoint-down-lg {
+        top: 50%;
+        right: 7%;
+      }
+      @include media-breakpoint-down-md {
+        right: 0%;
+      }
+      @include media-breakpoint-down-sm {
+        right: -50%;
+      }
+    }
+  }
+  &-content {
+    h1 {
+      @include media-breakpoint-down-xl {
+        font-size: $base-font-size * 3 ;
+      }
+      @include media-breakpoint-down-sm {
+        font-size: $base-font-size * 2 ;
+      }
+    }
+    p {
+      font-weight: $medium-font-weight;
+      font-size: $base-font-size * 1.375;
+      line-height: 1.7;
+    }
+  }
+  &-banner {
+    &-image {
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  // start hero-two style
+  &-two {
+    background-color: #060a11;
+    &-shape-wrapper {
+      overflow: hidden;
+      bottom: 0%;
+      .shape-1,
+      .shape-2,
+      .shape-3 {
+        position: absolute;
+        border-radius: 50%;
+        top: -30%;
+        width: 760px;
+        height: 760px;
+        left: -15%;
+        background: #0047b0;
+        opacity: 0.7;
+        filter: blur(60px);
+        @include media-breakpoint-down-xxl {
+          left: -30%;
+          top: -45%;
+        }
+        @include media-breakpoint-down-lg {
+          left: -40%;
+          top: -50%;
+        }
+      }
+      .shape-2 {
+        top: -10%;
+        left: 80%;
+        width: 686px;
+        height: 686px;
+        background: #00b09b;
+        mix-blend-mode: screen;
+        opacity: 0.5;
+        @include media-breakpoint-down-lg {
+          left: 70%;
+        }
+      }
+      .shape-3 {
+        top: 15%;
+        left: 70%;
+        width: 615px;
+        height: 615px;
+        background: #6300b0;
+        opacity: 0.5;
+      }
+    }
+    &-content {
+      .banner {
+        margin-bottom: $base-margin * 2;
+        position: relative;
+        img {
+          max-width: 100%;
+          border-radius: 100px;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          width: 186px;
+          height: 186px;
+          background: #f1b000;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -36%);
+          z-index: -1;
+          border-radius: 50%;
+        }
+      }
+
+      h1 {
+        color: $color-white;
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2;
+        }
+      }
+      p {
+        color: #dfdfdf;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.7;
+      }
+    }
+  }
+  // start hero-three style
+  &-three {
+    background: linear-gradient(239.24deg, #f4f7fe 22.34%, #fbfcff 83.1%);
+    &-shape-wrapper {
+      overflow: hidden;
+      bottom: 0%;
+      .shape-1,
+      .shape-2,
+      .shape-3 {
+        position: absolute;
+        border-radius: 50%;
+        top: -60%;
+        width: 686px;
+        height: 686px;
+        left: 50%;
+        background: #fffbda;
+        mix-blend-mode: multiply;
+        filter: blur(60px);
+        @include media-breakpoint-down-xl {
+          left: 40%;
+        }
+        @include media-breakpoint-down-lg {
+          top: -30%;
+          left: 15%;
+        }
+        @include media-breakpoint-down-md {
+          left: 5%;
+        }
+      }
+      .shape-2 {
+        top: -20%;
+        left: 85%;
+        background: #cdf6ff;
+        @include media-breakpoint-down-lg {
+          top: -20%;
+          left: 70%;
+        }
+      }
+      .shape-3 {
+        top: -35%;
+        left: -10%;
+        opacity: 0.5;
+        background: #b9ffe2;
+        @include media-breakpoint-down-xxl {
+          top: -45%;
+          left: -27%;
+        }
+
+        @include media-breakpoint-down-lg {
+          top: -20%;
+          left: -50%;
+        }
+      }
+    }
+  }
+}

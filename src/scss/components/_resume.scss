@@ -1,0 +1,344 @@
+/********** 
+8. Resume Section Styles
+**********/
+
+.resume,
+.resume-two {
+  position: relative;
+  z-index: 2;
+  padding-bottom: $base-padding * 8;
+  &-shape-wrapper {
+    bottom: 0%;
+    overflow: hidden;
+    .shape-1,
+    .shape-2,
+    .shape-3,
+    .shape-4,
+    .shape-5 {
+      position: absolute;
+      border-radius: 50%;
+      width: 660px;
+      height: 660px;
+      left: 52%;
+      top: 50%;
+      background: #c4dbfe;
+      mix-blend-mode: multiply;
+      opacity: 0.65;
+      filter: blur(60px);
+      @include media-breakpoint-down-lg {
+        left: 30%;
+      }
+      @include media-breakpoint-down-md {
+        left: 0%;
+      }
+    }
+    .shape-2 {
+      left: 13%;
+      background: #c4dbfe;
+      @include media-breakpoint-down-xxl {
+        left: 0%;
+        top: 52%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 6%;
+      }
+      @include media-breakpoint-down-md {
+        left: 0%;
+      }
+    }
+    .shape-3 {
+      top: 7%;
+      left: 34%;
+      opacity: 0.8;
+      background: #d8ff85;
+      @include media-breakpoint-down-xxl {
+        left: 25%;
+        top: 3%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 10%;
+      }
+      @include media-breakpoint-down-md {
+        left: 0%;
+        top: 20%;
+      }
+    }
+    .shape-4 {
+      top: 12%;
+      left: 18%;
+      opacity: 0.3;
+      background: #ffc700;
+      @include media-breakpoint-down-xxl {
+        left: 5%;
+        top: 6%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 0%;
+      }
+      @include media-breakpoint-down-md {
+        top: 20%;
+      }
+    }
+    .shape-5 {
+      top: 12%;
+      left: 48%;
+      opacity: 0.3;
+      background: #ffc700;
+      @include media-breakpoint-down-xxl {
+        top: 8%;
+        left: 40%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 15%;
+      }
+      @include media-breakpoint-down-md {
+        left: 0%;
+      }
+    }
+  }
+  .section-header {
+    padding: 0;
+    h2 {
+      font-size: $base-font-size * 2.5;
+      background: linear-gradient(to right, #4c32e0 0%, #16b4f2 10%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: $base-margin * 1.75;
+      @include media-breakpoint-down-lg {
+        background: linear-gradient(to right, #4c32e0 30%, #16b4f2 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .card {
+    border: $base-border-width solid $color-gray;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: $base-padding * 6.75 $base-padding * 5 $base-padding * 0;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 3.75 $base-padding * 5 $base-padding * 0.75;
+    }
+    @include media-breakpoint-down-lg {
+      padding: $base-padding * 2;
+      text-align: center;
+    }
+
+    &-body {
+      padding: $base-padding * 3 0 0 0;
+      @include media-breakpoint-down-md {
+        padding-top: $base-padding * 1.5;
+      }
+      .title {
+        padding-bottom: $base-padding * 2;
+        margin-bottom: $base-margin * 3.75;
+        border-bottom: $base-border-width solid $color-gray;
+        @include media-breakpoint-down-lg {
+          margin-bottom: $base-margin * 2;
+          padding-bottom: $base-padding * 2;
+        }
+        h5 {
+          color: $color-text-light;
+          font-weight: $medium-font-weight;
+        }
+      }
+      .experiencEducation,
+      .skillsTools {
+        display: flex;
+        @include media-breakpoint-down-md {
+          display: block;
+        }
+      }
+
+      .content {
+        margin-bottom: $base-margin * 5.5;
+        @include media-breakpoint-down-xxl {
+          margin-bottom: $base-margin * 2.5;
+        }
+        h4 {
+          margin-bottom: $base-margin;
+        }
+        p {
+          font-size: 18px;
+          font-weight: $medium-font-weight;
+          color: $color-text;
+          margin-bottom: 0;
+        }
+        li {
+          font-size: 20px;
+          font-weight: $extbold-font-weight;
+          color: $color-text;
+          margin-bottom: $base-margin * 2;
+          transition: $base-transition;
+          font-family: $font-secondary;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .experience,
+      .skills {
+        width: 60%;
+        @include media-breakpoint-down-xl {
+          width: 50%;
+        }
+        @include media-breakpoint-down-lg {
+          width: 100%;
+        }
+      }
+      .education,
+      .tools {
+        width: 40%;
+        @include media-breakpoint-down-xl {
+          width: 50%;
+        }
+        @include media-breakpoint-down-lg {
+          width: 100%;
+        }
+        &-wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+          grid-template-rows: repeat(2, 1fr);
+          grid-row-gap: 40px;
+
+          @include media-breakpoint-down-lg {
+            grid-row-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+          }
+        }
+      }
+      .freelance {
+        margin-bottom: $base-margin * 5;
+        @include media-breakpoint-down-md {
+          margin-bottom: $base-margin * 3;
+        }
+        h5 {
+          font-size: 18px;
+        }
+        &-wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+          grid-template-rows: repeat(2, 1fr);
+          grid-row-gap: 50px;
+          @include media-breakpoint-down-md {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          }
+        }
+      }
+    }
+  }
+  // start resume-two style
+  &-two {
+    position: relative;
+    background: #4c32e0;
+    padding-bottom: 180px;
+    @include media-breakpoint-down-xxl {
+      padding-bottom: 100px;
+    }
+    @include media-breakpoint-down-xl {
+      padding-bottom: 50px;
+    }
+    &-shape-wrapper {
+      overflow: hidden;
+      bottom: 0%;
+      .shape-1,
+      .shape-2,
+      .shape-3,
+      .shape-4 {
+        position: absolute;
+        border-radius: 50%;
+        width: 906px;
+        height: 910px;
+        left: -30%;
+        top: -30%;
+        background: #88a2ff;
+        mix-blend-mode: screen;
+        filter: blur(60px);
+        @include media-breakpoint-down-xxl {
+          left: -42%;
+        }
+      }
+      .shape-2 {
+        width: 1823px;
+        height: 1832px;
+        top: -30%;
+        left: -27%;
+        mix-blend-mode: multiply;
+        background: #0026ad;
+        opacity: 0.4;
+        @include media-breakpoint-down-xxl {
+          left: -100%;
+        }
+      }
+      .shape-3 {
+        width: 1357px;
+        height: 1364px;
+        top: -15%;
+        left: 64%;
+        mix-blend-mode: normal;
+        background: #1e75f8;
+        opacity: 0.3;
+      }
+      .shape-4 {
+        top: 48%;
+        left: 45%;
+        width: 1291px;
+        height: 1249px;
+        mix-blend-mode: normal;
+        background: #1b7aff;
+        opacity: 0.3;
+      }
+    }
+    .section-header {
+      padding: $base-padding * 0.5 0 $base-padding * 2.5;
+      h2 {
+        font-size: $base-font-size * 3;
+        color: $color-white;
+        -webkit-text-fill-color: $color-white;
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2;
+        }
+      }
+    }
+    .card {
+      background: none;
+      border: none;
+      padding: $base-padding * 6 0 0 0;
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 4 0 0 0;
+      }
+      @include media-breakpoint-down-lg {
+        padding: $base-padding * 3 0 0 0;
+      }
+      @include media-breakpoint-down-sm {
+        padding: $base-padding * 2 0 0 0;
+      }
+      &-body {
+        padding: 0;
+        .title {
+          border-bottom: $base-border-width solid
+            rgba($color: #dfdfdf, $alpha: 0.2);
+          h5 {
+            color: #dfdfdf;
+          }
+        }
+        .content {
+          @include media-breakpoint-down-xl {
+            margin-bottom: $base-margin * 2.5;
+          }
+          h4 {
+            color: $color-white;
+          }
+          p {
+            font-weight: $medium-font-weight;
+            color: #dfdfdf;
+          }
+          li {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

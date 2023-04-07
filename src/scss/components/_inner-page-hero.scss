@@ -1,0 +1,121 @@
+/********** 
+16.  Hero inner Page Section Styles
+**********/
+
+@use "sass:math";
+.page-hero {
+  position: relative;
+  padding-top: 13.75rem;
+  padding-bottom: 8.75rem;
+  &-shape-wrapper {
+    overflow: hidden;
+    z-index: -1;
+    bottom: 0%;
+    .shape-1,
+    .shape-2 {
+      position: absolute;
+      border-radius: 50%;
+      width: 686px;
+      height: 580px;
+      left: -10%;
+      top: -10%;
+      background: #ffb9b9;
+      mix-blend-mode: multiply;
+      opacity: 0.5;
+      filter: blur(60px);
+      @include media-breakpoint-down-xxl {
+        left: -20%;
+        top: -30%;
+      }
+      @include media-breakpoint-down-lg {
+        left: -40%;
+        top: -40%;
+      }
+      @include media-breakpoint-down-md {
+        left: -70%;
+      }
+      @include media-breakpoint-down-sm {
+        left: -130%;
+      }
+    }
+    .shape-2 {
+      left: 80%;
+      top: 0%;
+      opacity: 0.9;
+      background: #e3ffcd;
+      @include media-breakpoint-down-xl {
+        left: 70%;
+        top: -30%;
+      }
+      @include media-breakpoint-down-lg {
+        top: -40%;
+      }
+      @include media-breakpoint-down-md {
+        left: 60%;
+      }
+    }
+  }
+  @include media-breakpoint-down-xxl {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+  }
+  @include media-breakpoint-down-lg {
+    text-align: center;
+  }
+  @include media-breakpoint-down-md {
+    padding-top: 9rem;
+  }
+  @include media-breakpoint-down-sm {
+    padding-bottom: 1.5rem;
+  }
+  .page-heading {
+    &-title {
+      margin-bottom: $base-margin * 6.5;
+      @include media-breakpoint-down-xxl {
+        margin-bottom: $base-margin * 4.5;
+      }
+      @include media-breakpoint-down-sm {
+        margin-bottom: $base-margin * 2.5;
+      }
+      h1 {
+        @include media-breakpoint-down-md {
+          font-size: $base-font-size * 2;
+        }
+      }
+    }
+    &-content {
+      .item {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-bottom: $base-margin * 3.5;
+          @include media-breakpoint-down-sm {
+            margin-bottom: $base-margin * 2;
+          }
+        }
+        &:nth-child(2) {
+          margin-bottom: $base-margin * 0;
+          @include media-breakpoint-down-sm {
+            margin-bottom: $base-margin * 2;
+          }
+        }
+        span {
+          font-size: 18px;
+          font-weight: $medium-font-weight;
+          color: $color-text;
+          margin-bottom: math.div($base-margin , 2);
+          display: block;
+        }
+        a {
+          font-family: $font-secondary;
+          color: $color-text;
+        }
+        .title {
+          font-size: 20px;
+          font-weight: $extbold-font-weight;
+          font-family: $font-secondary;
+        }
+      }
+    }
+  }
+}

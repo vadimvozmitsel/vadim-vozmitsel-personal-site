@@ -1,0 +1,404 @@
+/********** 
+9. Project Page styles
+**********/
+@use "sass:math";
+
+.project,
+.project-two,
+.project-three {
+  position: relative;
+  &-shape-wrapper {
+    overflow: hidden;
+    bottom: 0%;
+    .shape-1,
+    .shape-2,
+    .shape-3 {
+      position: absolute;
+      border-radius: 50%;
+      width: 686px;
+      height: 686px;
+      left: -5%;
+      top: 3%;
+      background: #b8ffe1;
+      mix-blend-mode: multiply;
+      opacity: 0.3;
+      filter: blur(60px);
+      z-index: -1;
+    }
+    .shape-2 {
+      top: 5%;
+      left: 35%;
+      opacity: 0.35;
+      background: #fbcaff;
+      @include media-breakpoint-down-lg {
+        top: 2%;
+        left: 20%;
+      }
+    }
+    .shape-3 {
+      top: 60%;
+      left: 53%;
+      background: #b8ffe1;
+      opacity: 0.3;
+      @include media-breakpoint-down-lg {
+        top: 85%;
+        left: 15%;
+      }
+    }
+  }
+  .section-header {
+    padding-top: $base-padding * 3;
+    padding-bottom: $base-padding * 5;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 3 0 $base-padding * 3;
+    }
+
+    @include media-breakpoint-down-md {
+      padding-bottom: $base-padding * 4;
+    }
+  }
+  .one {
+    background-color: $color-warning;
+    padding: $base-padding * 4 $base-padding * 4 $base-padding * 0 $base-padding *
+      5;
+    position: relative;
+    border-radius: 5px;
+    @include media-breakpoint-down-lg {
+      padding: $base-padding * 2 $base-padding * 2 $base-padding * 0
+        $base-padding * 2;
+    }
+    p {
+      color: $color-text;
+      margin-bottom: $base-margin * 5.5;
+      @include media-breakpoint-down-xxl {
+        margin-bottom: $base-margin * 3;
+      }
+      @include media-breakpoint-down-lg {
+        margin-bottom: $base-margin * 1;
+      }
+    }
+  }
+  &-item {
+    overflow: hidden;
+    display: flex;
+    background-color: #e6f1ff;
+    padding: $base-padding * 2 $base-padding * 2 $base-padding * 0 $base-padding *
+      3;
+    border-radius: 5px;
+    &.bg-light-dark {
+      background-color: #5960ff !important;
+    }
+    @include media-breakpoint-down-lg {
+      display: block;
+      text-align: center;
+      border-radius: 5px;
+      padding: $base-padding * 2 $base-padding * 2 $base-padding * 0
+        $base-padding * 2;
+    }
+    &-content {
+      position: relative;
+      width: 40%;
+      padding: $base-padding * 4.5 0 0;
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 3.5 0 0;
+      }
+      @include media-breakpoint-down-xl {
+        padding: $base-padding * 1.5 0 0;
+      }
+      @include media-breakpoint-down-lg {
+        width: 100%;
+        margin-bottom: $base-margin * 2;
+        padding: $base-padding * 2 0 0;
+      }
+      h2 {
+        margin-bottom: $base-margin * 1.25;
+      }
+      p {
+        color: $color-text;
+        margin-bottom: $base-margin * 2.5;
+        @include media-breakpoint-down-xxl {
+          margin-bottom: $base-margin * 3;
+        }
+        @include media-breakpoint-down-lg {
+          margin-bottom: $base-margin * 1;
+        }
+      }
+      h5 {
+        font-size: 22px;
+        margin-bottom: $base-margin * 0.5;
+        font-weight: 600;
+        font-family: $font-primary;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    &-banner {
+      width: 60%;
+      align-self: flex-end;
+      @include media-breakpoint-down-lg {
+        width: 100%;
+      }
+      img {
+        filter: drop-shadow(0px 40px 94px rgba(0, 0, 0, 0.19));
+      }
+    }
+  }
+  &-item-two {
+    position: relative;
+    @include media-breakpoint-down-lg {
+      margin-bottom: $base-margin * 2;
+    }
+    &-content {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      h5 {
+        color: $color-white;
+        font-size: 22px;
+        margin-bottom: $base-margin * 0.5;
+        font-weight: 600;
+        font-family: $font-primary;
+      }
+      p {
+        color: $color-white;
+        margin-bottom: $base-margin * 2.5;
+        @include media-breakpoint-down-xxl {
+          margin-bottom: $base-margin * 3;
+        }
+        @include media-breakpoint-down-lg {
+          margin-bottom: $base-margin * 1;
+        }
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    &-banner {
+      position: relative;
+      align-self: flex-end;
+      border-radius: 5px;
+      overflow: hidden;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: $color-blue;
+        opacity: 0.7;
+        
+      }
+    }
+    &-left{
+      .project-item-two-banner {
+        &::before {
+          background: mix($color-black, $color-blue, 41.5%);     
+        }
+      }
+    }
+  }
+
+  // start project-two style
+  &-two {
+    &-shape-wrapper {
+      overflow: hidden;
+      bottom: 0%;
+      .shape-1,
+      .shape-2,
+      .shape-3,
+      .shape-4 {
+        position: absolute;
+        border-radius: 50%;
+        width: 686px;
+        height: 686px;
+        left: -10%;
+        top: -10%;
+        background: #b9ffe2;
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+        filter: blur(60px);
+        z-index: -1;
+        @include media-breakpoint-down-xxl {
+          left: -30%;
+          top: -20%;
+        }
+        @include media-breakpoint-down-lg {
+          left: -40%;
+          top: -10%;
+        }
+        @include media-breakpoint-down-sm {
+          left: -100%;
+          top: -17%;
+        }
+      }
+      .shape-2 {
+        top: -15%;
+        left: 80%;
+        opacity: 1;
+        background: #cdf6ff;
+        @include media-breakpoint-down-xxl {
+          top: -20%;
+        }
+        @include media-breakpoint-down-lg {
+          top: -5%;
+          left: 70%;
+        }
+        @include media-breakpoint-down-sm {
+          top: -15%;
+          left: 60%;
+        }
+      }
+      .shape-3 {
+        top: 45%;
+        left: -13%;
+        background: #b8ffe1;
+        opacity: 0.3;
+      }
+      .shape-4 {
+        top: 65%;
+        left: 55%;
+        background: #b8ffe1;
+        opacity: 0.3;
+        @include media-breakpoint-down-xxl {
+          top: 50%;
+        }
+      }
+    }
+    .section-header {
+      padding-bottom: $base-padding * 6.75;
+      @include media-breakpoint-down-xxl {
+        padding-top: $base-padding * 2;
+        padding-bottom: $base-padding * 3;
+      }
+      @include media-breakpoint-down-lg {
+        padding-top: $base-padding * 1;
+      }
+      h2 {
+        font-size: $base-font-size * 4;
+        @include media-breakpoint-down-lg {
+          font-size: $base-font-size * 3;
+        }
+        @include media-breakpoint-down-sm {
+          font-size: $base-font-size * 2;
+        }
+      }
+    }
+    .link {
+      padding-top: $base-padding * 9;
+      @include media-breakpoint-down-xxl {
+        padding-top: $base-padding * 5;
+      }
+      @include media-breakpoint-down-lg {
+        padding-top: $base-padding * 3;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        font-size: $base-font-size * 1.5;
+        font-weight: $medium-font-weight;
+        color: $color-header;
+        transition: $base-transition;
+        i {
+          padding-right: $base-padding;
+        }
+        &:hover {
+          color: $color-text;
+        }
+      }
+    }
+  }
+  // start project-three style
+  &-three {
+    padding: $base-padding * 6.5 0 $base-padding * 3.5;
+    @include media-breakpoint-down-xxl {
+      padding: $base-padding * 1 0 $base-padding * 0;
+    }
+    @include media-breakpoint-down-xl {
+      padding-top: $base-padding * 2;
+    }
+
+    .section-header {
+      padding-bottom: $base-padding * 3;
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 3 $base-padding * 0;
+      }
+      @include media-breakpoint-down-lg {
+        padding-top: $base-padding;
+      }
+    }
+  }
+  // start project-details style
+  &-desc {
+    &-header {
+      padding: $base-padding * 7.5 0;
+      @include media-breakpoint-down-xxl {
+        padding: $base-padding * 4.5 0;
+      }
+      @include media-breakpoint-down-lg {
+        padding: $base-padding * 2 0;
+        text-align: center;
+      }
+
+      h3 {
+        margin-bottom: $base-margin * 2.5;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      &:last-child {
+        padding-top: 0;
+      }
+    }
+    &-content,
+    .banner {
+      padding-bottom: $base-padding * 7.5;
+      @include media-breakpoint-down-xxl {
+        padding-bottom: $base-padding * 4.5;
+      }
+      @include media-breakpoint-down-xl {
+        padding-bottom: $base-padding * 2.5;
+      }
+      @include media-breakpoint-down-lg {
+        padding-bottom: $base-padding * 2;
+      }
+      h3 {
+        margin-bottom: $base-margin * 2.5;
+      }
+      ol {
+        padding-left: $base-padding;
+        margin-bottom: 0;
+        li {
+          padding-bottom: math.div($base-padding, 2);
+        }
+      }
+    }
+  }
+  // start project-related style
+  &-related {
+    background-color: #ececec !important;
+    .section-header {
+      padding: $base-padding * 3.75 0;
+      h2 {
+        color: $color-black;
+        font-size: $base-font-size * 2;
+        font-weight: $bold-font-weight;
+        margin-bottom: $base-margin * 2.5;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &-item {
+      img {
+        width: 100%;
+        @include media-breakpoint-down-lg {
+          margin-bottom: $base-margin * 2;
+        }
+      }
+    }
+  }
+}

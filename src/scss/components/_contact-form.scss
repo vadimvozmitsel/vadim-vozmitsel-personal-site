@@ -1,0 +1,236 @@
+/********** 
+14. contact Page Styles
+**********/
+
+/* Defult Form Control styles */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: $base-padding $base-padding * 0.75;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: $medium-font-weight;
+  line-height: 1.7;
+  color: $color-text;
+  background-color: $color-white;
+  border: 1px solid #cbd4db;
+  appearance: none; // Fix appearance for date inputs in Safari
+  &:focus {
+    border-color: #060a11;
+    outline: 0;
+    box-shadow: none;
+  }
+  &::-webkit-input-placeholder {
+    /* Edge */
+    color: $color-text;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: $medium-font-weight;
+    line-height: 1.7;
+    color: $color-text;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer */
+    color: $color-text;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: $medium-font-weight;
+    line-height: 1.7;
+    color: $color-text;
+  }
+
+  &::placeholder {
+    color: $color-text;
+    opacity: 1;
+    font-size: 18px;
+    font-weight: $medium-font-weight;
+    line-height: 1.7;
+    color: $color-text;
+  }
+}
+
+/* Default Form Control styles */
+.form-select {
+  display: block;
+  width: 100%;
+  padding: $base-padding $base-padding * 2.25 $base-padding $base-padding * 0.75;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: $medium-font-weight;
+  line-height: 1.7;
+  color: $color-text;
+  background-color: $color-white;
+  border: 1px solid #cbd4db;
+
+  &:focus {
+    border-color: #060a11;
+    outline: 0;
+    box-shadow: none;
+    outline: 0;
+  }
+}
+/* Contact Page Form Style */
+.contact-form {
+  position: relative;
+  &-shape-wrapper {
+    overflow: hidden;
+    z-index: -1;
+    bottom: 0%;
+    .shape-1,
+    .shape-2,
+    .shape-3,
+    .shape-4,
+    .shape-5 {
+      position: absolute;
+      border-radius: 50%;
+      width: 686px;
+      height: 686px;
+      left: -12%;
+      top: -20%;
+      background: #b9ffe2;
+      mix-blend-mode: multiply;
+      opacity: 0.5;
+      filter: blur(60px);
+      @include media-breakpoint-down-xxl {
+        left: -18%;
+        top: -25%;
+      }
+      @include media-breakpoint-down-xl {
+        left: -30%;
+        top: -30%;
+      }
+      @include media-breakpoint-down-lg {
+        left: -40%;
+        top: -20%;
+      }
+    }
+    .shape-2 {
+      left: 77%;
+      top: 0;
+      opacity: 1;
+      background: #cdf6ff;
+      @include media-breakpoint-down-xl {
+        left: 70%;
+        top: -30%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 50%;
+        top: -20%;
+      }
+    }
+    .shape-3 {
+      left: 5%;
+      top: 20%;
+      background: #fffdcd;
+      @include media-breakpoint-down-xxl {
+        left: 15%;
+        top: 12%;
+      }
+    }
+    .shape-4 {
+      left: 40%;
+      top: 30%;
+      width: 898px;
+      height: 807px;
+      background: #fbcaff;
+      opacity: 0.35;
+      @include media-breakpoint-down-xxl {
+        left: 25%;
+      }
+      @include media-breakpoint-down-xl {
+        left: 10%;
+      }
+    }
+    .shape-5 {
+      left: 6%;
+      top: 65%;
+      width: 486px;
+      height: 486px;
+      background: #86ffcc;
+      opacity: 0.3;
+      @include media-breakpoint-down-xxl {
+        left: 0%;
+        top: 60%;
+      }
+    }
+  }
+  .section-header {
+    padding-bottom: $base-padding * 7.5;
+    @include media-breakpoint-down-xxl {
+      padding-bottom: $base-padding * 3.5;
+    }
+    h2 {
+      font-size: $base-font-size * 4;
+      @include media-breakpoint-down-lg {
+        font-size: $base-font-size * 2;
+      }
+    }
+  }
+  form {
+    background-color: $color-white;
+    padding: $base-padding * 3.75;
+    margin-right: 2px;
+    border-radius: 5px;
+    @include media-breakpoint-down-lg {
+      padding: $base-padding * 2;
+      text-align: center;
+      margin: 0 0 $base-margin 0;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 2 0;
+    }
+    h3 {
+      color: $color-text;
+      font-weight: $bold-font-weight;
+      margin: $base-margin * 0 0 $base-margin * 3.5;
+    }
+    .form-control,
+    .form-select {
+      margin-bottom: $base-margin * 1.25;
+      padding-left: $base-padding * 1.5;
+      border-radius: $base-border-radius;
+    }
+  }
+  &-widget {
+    background-color: $color-white;
+    border-radius: 5px;
+    padding: $base-padding * 4 $base-padding * 2.5 $base-padding * 2;
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 4 $base-padding * 1.5 $base-padding * 2;
+    }
+    @include media-breakpoint-down-lg {
+      text-align: center;
+      padding-bottom: 0;
+    }
+    img {
+      margin-bottom: $base-margin;
+    }
+    h6 {
+      color: $color-text;
+      font-size: 18px;
+      margin-bottom: $base-margin * 5;
+      @include media-breakpoint-down-xxl {
+        margin-bottom: $base-margin * 3;
+      }
+      @include media-breakpoint-down-xl {
+        margin-bottom: $base-margin * 2;
+      }
+    }
+    li {
+      margin-bottom: $base-margin * 1.25;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        display: block;
+      }
+      a {
+        color: $color-text;
+        font-size: $base-font-size * 1.25;
+        font-weight: $extbold-font-weight;
+        font-family: $font-secondary;
+      }
+    }
+  }
+}

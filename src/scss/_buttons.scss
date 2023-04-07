@@ -1,0 +1,333 @@
+/********** 
+  2. Button Styles 
+**********/
+.btn {
+  letter-spacing: $base-letter-spacing;
+  font-weight: $bold-font-weight;
+
+  &:hover {
+    color: $color-white;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    color: $color-white !important;
+    outline: 0;
+
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active {
+    color: $color-white !important;
+
+    &:focus {
+      color: $color-white !important;
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: 0.1;
+  }
+  @include media-breakpoint-down-sm {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+.btn {
+  &-primary {
+    position: relative;
+    color: $color-white;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    text-transform: capitalize;
+    background: $color-header;
+    border: $base-border-width solid transparent;
+    overflow: hidden;
+    transition: 0.7s all ease-in-out;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: 0.7s all ease-in-out;
+      z-index: 2;
+      svg {
+        transform: translateY(-2px);
+        margin-left: 5px;
+      }
+      &:nth-child(1) {
+        transition: 0.7s all ease-in-out;
+        transform: translateY(-16px);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      height: 250px;
+      background: $color-text;
+      border-radius: 50%;
+      transition: 0.7s all ease-in-out;
+    }
+    &:hover {
+      border: $base-border-width solid transparent;
+      background: $color-text;
+      span {
+        transform: translateY(-100%);
+        &:nth-child(1) {
+          transform: translateY(-150px);
+        }
+        &:nth-child(2) {
+          transform: translateY(-36px);
+        }
+      }
+      &::before {
+        bottom: -150px;
+      }
+    }
+    btn-check:focus + &,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:hover:focus {
+      color: $color-white !important;
+      background: $color-header;
+      border: $base-border-width solid transparent;
+    }
+  }
+  &-secondary {
+    background: rgba(7, 12, 19, 0.04);
+    color: $color-header;
+    border: $base-border-width solid transparent;
+    text-transform: capitalize;
+    position: relative;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    overflow: hidden;
+    transition: 0.7s all ease-in-out;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: 0.7s all ease-in-out;
+      z-index: 2;
+      &:nth-child(1) {
+        color: $color-header;
+        transition: 0.7s all ease-in-out;
+        transform: translateY(-18px);
+      }
+      &:nth-child(2) {
+        color: $color-white;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -260px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      height: 250px;
+      background: $color-header;
+      border-radius: 50%;
+      transition: 0.7s all ease-in-out;
+    }
+    &:hover {
+      border: $base-border-width solid transparent;
+      background: $color-text;
+      span {
+        transform: translateY(-100%);
+        &:nth-child(1) {
+          transform: translateY(-150px);
+        }
+        &:nth-child(2) {
+          transform: translateY(-39px);
+        }
+      }
+      &::before {
+        bottom: -150px;
+      }
+    }
+    .btn-check:focus + &,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:hover:focus {
+      color: $color-header !important;
+      background: rgba(7, 12, 19, 0.04);
+      border: $base-border-width solid transparent;
+    }
+  }
+
+  &-links {
+    background: rgba(7, 12, 19, 0.04);
+    color: $color-header;
+    border: $base-border-width solid transparent;
+    position: relative;
+    font-weight: $bold-font-weight;
+    text-transform: capitalize;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    transition: 0.7s all ease-in-out;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: 0.7s all ease-in-out;
+      z-index: 2;
+      &:nth-child(1) {
+        transition: 0.7s all ease-in-out;
+        transform: translateY(-16px);
+      }
+      &:nth-child(2) {
+        svg {
+          path {
+            stroke: $color-white;
+          }
+        }
+      }
+      svg {
+        transform: translateY(-2px);
+        margin-left: 4px;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -250px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      height: 250px;
+      background: $color-text;
+      border-radius: 50%;
+      transition: 0.7s all ease-in-out;
+    }
+    &:hover {
+      border: $base-border-width solid transparent;
+      background: $color-text;
+      span {
+        transform: translateY(-100%);
+        &:nth-child(1) {
+          color: $color-header;
+          transform: translateY(-150px);
+        }
+        &:nth-child(2) {
+          color: $color-white;
+          transform: translateY(-32px);
+        }
+      }
+      &::before {
+        bottom: -150px;
+      }
+    }
+    .btn-check:focus + &,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:hover:focus {
+      color: $color-header !important;
+      background: rgba(7, 12, 19, 0.04);
+      border: $base-border-width solid transparent;
+    }
+  }
+  &-white {
+    background: rgba(255, 255, 255, 0.06);
+    color: $color-white;
+    border: $base-border-width solid transparent;
+    transition: $base-transition;
+    text-transform: capitalize;
+    position: relative;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    overflow: hidden;
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: 0.7s all ease-in-out;
+      z-index: 2;
+      &:nth-child(1) {
+        color: $color-white;
+        transition: 0.7s all ease-in-out;
+        transform: translateY(-16px);
+      }
+      &:nth-child(2) {
+        color: $color-white;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -260px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      height: 250px;
+      background: rgba(255, 255, 255, 0.48%);
+      border-radius: 50%;
+      transition: 0.7s all ease-in-out;
+      @include media-breakpoint-down-sm {
+        width: 500px;
+      }
+    }
+    &:hover {
+      border: $base-border-width solid transparent;
+      background: rgba(255, 255, 255, 0.06);
+      span {
+        transform: translateY(-100%);
+        &:nth-child(1) {
+          transform: translateY(-150px);
+        }
+        &:nth-child(2) {
+          transform: translateY(-32px);
+        }
+      }
+      &::before {
+        bottom: -150px;
+      }
+    }
+    .btn-check:focus + &,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:hover:focus {
+      color: $color-header !important;
+      background: rgba(7, 12, 19, 0.04);
+      border: $base-border-width solid transparent;
+    }
+  }
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: $base-padding $base-padding * 1.3;
+  font-size: $base-font-size * 0.875;
+  border-radius: 0.5rem;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  padding:  $base-padding $base-padding * 1.5;
+  font-size: $base-font-size * 0.875;
+  border-radius: 0.5rem;
+}
+
+btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus, .btn-primary:hover:focus {
+  color: #fff !important;
+  background: #060a11;
+  border: 1px solid transparent;
+}

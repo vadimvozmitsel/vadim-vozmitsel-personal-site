@@ -1,0 +1,96 @@
+/********** 
+ 7. Services Page Styles
+**********/
+.services,
+.services-two {
+  position: relative;
+  &-shape-wrapper {
+    bottom: 0%;
+    @include media-breakpoint-down-xxl {
+      overflow: hidden;
+    }
+    .shape-1,
+    .shape-2 {
+      position: absolute;
+      border-radius: 50%;
+      width: 686px;
+      height: 686px;
+      top: 30%;
+      mix-blend-mode: multiply;
+      opacity: 0.2;
+      filter: blur(60px);
+    }
+    .shape-1 {
+      left: 0%;
+      background: #d5ffc6;
+      @include media-breakpoint-down-xxl {
+        left: -15%;
+      }
+    }
+    .shape-2 {
+      right: 0%;
+      top: 0;
+      background: #b6fffb;
+      @include media-breakpoint-down-xxl {
+        right: -15%;
+      }
+    }
+  }
+  padding-top: 5.5rem;
+  // padding-bottom: 3rem;
+  @include media-breakpoint-down-xxl {
+    padding-top: 2.5rem;
+  }
+  @include media-breakpoint-down-xl {
+    padding-top: 0;
+  }
+  @include media-breakpoint-down-lg {
+    padding: 0;
+  }
+
+  .card {
+    transition: $base-transition;
+    text-align: center;
+    padding: $base-padding * 3.75 $base-padding * 1.25 $base-padding * 3.2;
+    border-radius: 5px;
+    box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.04);
+    background: $color-white;
+    z-index: 100;
+    margin-top: 0.75rem;
+
+    &-icon {
+      margin-bottom: $base-margin * 2.5;
+    }
+    &-body {
+      padding: 0;
+      .card-title {
+        text-transform: capitalize;
+        transition: $base-transition;
+        margin-bottom: $base-margin * 2;
+      }
+      h4 {
+        color: $color-text;
+      }
+    }
+
+    @include media-breakpoint-down-xl {
+      padding: $base-padding * 2 $base-padding * 1 $base-padding * 3.2;
+    }
+    @include media-breakpoint-down-lg {
+      margin-bottom: $base-margin;
+      padding: $base-padding * 3.75 $base-padding * 1.25 $base-padding * 3.2;
+    }
+    @include media-breakpoint-down-md {
+      padding: $base-padding * 1.5 $base-padding $base-padding * 2;
+    }
+  }
+  // Start services-two style
+  &-two {
+    .card {
+      margin-bottom: $base-margin * 2;
+      @include media-breakpoint-down-lg {
+        margin-bottom: $base-margin;
+      }
+    }
+  }
+}
