@@ -1,0 +1,46 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	JACKCREATIVE
+-------------------------------------------------------------------*/
+/* ====== index =====
+1. Default Styles
+2. Button Styles
+3.  Spacing Styles
+4.  Grid Styles
+5.  Navbar Styles
+6.  Hero Section Styles
+7.  Services Page Styles
+8.  Resume Section Styles
+9.  Project Page Styles
+10. Counter Up Section Styles
+11. Feedback Section Styles
+12. Blog Page Styles
+13. Pagination Section Styles
+14. contact Page Styles
+15. 404 Page Styles
+16. Hero inner Page Section Styles
+17. Footer Section Styles
+
+
+===================== */
+
+@import "variables";
+@import "mixins";
+@import "root";
+@import "buttons";
+@import "grid";
+@import "spacer";
+//Theme Components
+@import "components/navbar";
+@import "components/hero";
+@import "components/services";
+@import "components/resume";
+@import "components/project";
+@import "components/counter-up";
+@import "components/feedback";
+@import "components/blog";
+@import "components/pagination";
+@import "components/contact-form";
+@import "components/404";
+@import "components/inner-page-hero";
+@import "components/footer";

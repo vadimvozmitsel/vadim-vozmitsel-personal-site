@@ -1,0 +1,68 @@
+/********** 
+10. Counter UP Section
+**********/
+@use "sass:math";
+.counter-up {
+  // ******start-counter-up******
+  padding-top: $base-padding * 7.5;
+  @include media-breakpoint-down-xxl {
+    padding-top: $base-padding * 5.5;
+  }
+  @include media-breakpoint-down-lg {
+    padding-top: $base-padding * 3.5;
+  }
+  .counter-wraper {
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(#dfdfdf, 0.5);
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    @include media-breakpoint-down-md {
+      margin-bottom: $base-margin * 1.25;
+    }
+    &-item {
+      text-align: center;
+      @include media-breakpoint-down-md {
+        margin-bottom: $base-margin * 1.25;
+      }
+      .counter-percent {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: math.div($base-margin , 2);
+        @include media-breakpoint-down-md {
+          justify-content: center;
+        }
+        span.counter,
+        span.percent {
+          font-size: 50px;
+          line-height: 1;
+          color: $color-black;
+          font-family: $font-secondary;
+          font-weight: 800;
+
+          @include media-breakpoint-down-md {
+            font-size: 52px;
+          }
+          @include media-breakpoint-down-sm {
+            font-size: 32px;
+          }
+        }
+        span.percent {
+          margin-left: 5px;
+        }
+      }
+
+      h5 {
+        text-transform: uppercase;
+        @include media-breakpoint-down-lg {
+          font-size: $base-margin;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,354 @@
+
+/********** 
+5. Navbar Styles 
+**********/
+@use "sass:math";
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  align-items: center;
+  justify-content: space-between; // space out brand from logo
+  padding-top: $base-padding * 1.9;
+  padding-right: $base-padding * 1.25 ; // default: null
+  padding-bottom: $base-padding * 1.9;
+  padding-left: $base-padding * 1.25; // default: null
+  background-color: transparent;
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
+}
+@include media-breakpoint-down-lg {
+  .navbar {
+    margin: $base-margin;
+    padding: 1.5rem 0;
+    border-radius: 0.5rem;
+    width: calc(100% - 32px) !important;
+  }
+}
+@include media-breakpoint-down-sm {
+  .navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: $base-margin;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+//start navbar-brand-two
+.navbar-brand-two {
+  .white-logo {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+}
+//end navbar-brand-two
+//Respnsive MObile View
+@include media-breakpoint-down-sm {
+  .navbar-brand {
+    flex: 1;
+  }
+}
+// Navbar nav
+//
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+
+  .nav-link {
+    padding-right: $base-padding *  1.25 !important;
+    padding-left: $base-padding *  1.25 !important;
+    display: flex;
+    align-items: center;
+    &.active {
+      color: $color-header;
+      font-weight: bold;
+    }
+    &:hover {
+      color: $color-header;
+    }
+  }
+  .dropdown {
+    .dropdown-menu {
+      box-sizing: content-box;
+      background: $color-white;
+      min-width: 188px;
+      transition: $base-transition;
+      border: 1px solid $color-gray;
+      border-radius: 0.5rem;
+      padding: 30px 30px 40px;
+      left: -70%;
+    }
+    &-toggle {
+      &:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        border-top: none;
+        padding:  0;
+        margin-right: 0 !important;
+      }
+    }
+    li.dropdown-megamenu-column-items {
+      margin-bottom: 1.4rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-item {
+      margin-bottom: 0;
+      color: $color-header;
+      text-align: left;
+      padding: 0;
+    }
+    .nav-arrow {
+      position: absolute;
+      top: -10px;
+      right: 15px;
+    }
+  }
+  /* Dropdown Menu for large screen */
+  @include media-breakpoint-up-lg {
+    .dropdown {
+      .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(0);
+        top: 100%;
+        transform-origin: 0 0 0;
+      }
+      &:hover {
+        .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: scaleY(1);
+          transform-origin: 0 0 0;
+        }
+      }
+    }
+  }
+  /* Dropdown Menu for Small screen */
+  @include media-breakpoint-down-lg {
+    margin-top: $base-margin * 1.5 !important;
+    .nav-link {
+      margin-bottom: 0.3rem;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      color: $color-header;
+      font-weight: $extbold-font-weight;
+      font-family: $font-secondary;
+    }
+
+    .dropdown {
+      width: calc(100% + 28px);
+      .dropdown-menu {
+        display: none;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        top: 100%;
+        transform-origin: 0 0 0;
+        left: 0;
+        transition: $base-transition;
+      }
+      .dropdown-menu.show {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(1);
+        transform-origin: 0 0 0;
+        height: auto;
+        text-align: center;
+        background: #f3f3f3;
+        width: auto;
+        border-radius: 0;
+      }
+      &-toggle {
+        &:after {
+          font-size: 1rem;
+          position: relative;
+          transform: translateY(-5%);
+          padding: 0;
+          margin: 0;
+        }
+      }
+      &-item {
+        text-align: center;
+      }
+    }
+  }
+}
+//start navbar two
+.navbar-two {
+  .nav-link {
+    color: #dfdfdf;
+    &:hover {
+      color: $color-white;
+    }
+  }
+  @include media-breakpoint-down-lg {
+    .nav-link {
+      &:hover {
+        color: $color-header;
+      }
+    }
+  }
+  .btn-links {
+    color: $color-white;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid transparent;
+    span {
+      color: $color-white;
+      &:nth-child(1) {
+        svg {
+          path {
+            stroke: $color-white;
+          }
+        }
+      }
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      span {
+        color: $color-white;
+      }
+      i {
+        color: $color-white;
+      }
+    }
+  }
+}
+//end navbar two
+//Sticky Navbar
+
+.sticky-nav {
+  padding: $base-padding $base-padding * 2 !important;
+  background: $color-white;
+  box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.04);
+  .btn-gray-dark {
+    background: $color-white;
+  }
+  .navbar-brand-two {
+    .white-logo {
+      display: none;
+    }
+    .logo {
+      display: block;
+    }
+  }
+  .navbar-two {
+    .nav-link {
+      color: $color-header;
+    }
+    .btn-links {
+      background: rgba(7, 12, 19, 0.04);
+      color: $color-header;
+      border: 1px solid transparent;
+      span {
+        color: $color-header;
+        &:nth-child(1) {
+          svg {
+            path {
+              stroke: $color-header;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//Customize style for mobile
+@include media-breakpoint-down-lg {
+  .navbar {
+    background: $color-white;
+  }
+  .navbar-brand-two {
+    .white-logo {
+      display: none;
+    }
+    .logo {
+      display: block;
+    }
+  }
+  .navbar-two {
+    .nav-link {
+      color: $color-text;
+    }
+    .btn-links {
+      background: rgba(7, 12, 19, 0.04);
+      border: 1px solid transparent;
+      span {
+        color: $color-header;
+      }
+    }
+  }
+  .sticky-nav{
+    .navbar-nav .dropdown {
+      width: calc(100% + 92px);
+      
+    }
+  }
+}
+@include media-breakpoint-down-sm {
+  .sticky-nav {
+    padding: $base-padding !important;
+    .navbar-nav .dropdown {
+      width: calc(100% + 60px);
+      
+    }
+  }
+}
+
+@include media-breakpoint-down-lg {
+  .navbar {
+    background: $color-white;
+  }
+}
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler {
+  background-color: $color-white; // remove default button style
+  border: $base-border-width solid #aaaab7; // remove default button style
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-default {
+  display: none;
+}
+.navbar-toggler .navbar-toggler-default {
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-toggled {
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar-toggler .navbar-toggler-toggled {
+  display: none;
+}
+.dropdown-toggle::after {
+  margin-left: 0;
+}

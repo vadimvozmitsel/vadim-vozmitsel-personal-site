@@ -1,0 +1,127 @@
+/********** 
+13. Pagination Section Styles
+**********/
+@use "sass:math";
+.pagination {
+  align-items: center;
+  margin-bottom: 0;
+  @include media-breakpoint-down-md {
+    justify-content: center;
+  }
+  .page-item {
+    margin-right: math.div($base-margin , 2);
+    @include media-breakpoint-down-sm {
+      margin-right: math.div($base-margin , 4);
+    }
+    &:first-child {
+      margin-right: 45rem;
+      border: none;
+      @include media-breakpoint-down-xxl {
+        margin-right: 39rem;
+      }
+      @include media-breakpoint-down-xl {
+        margin-right: 30rem;
+      }
+      @include media-breakpoint-down-lg {
+        margin-right: 15rem;
+      }
+      @include media-breakpoint-down-md {
+        margin-right: 2rem;
+      }
+      @include media-breakpoint-down-sm {
+        margin-right: 0rem;
+        display: none;
+      }
+      .page-link {
+        &:hover {
+          background-color: rgba(7, 12, 19, 0);
+          border-color: transparent;
+        }
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:not(:first-child) {
+      .page-link {
+        margin-left: 0;
+      }
+    } 
+    &:last-child {
+      .page-link {
+        display: block;
+        svg {
+          transform: translate(-5px, 4px);
+          @include media-breakpoint-down-sm {
+            transform: translate(-6px, 3px);
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+    .page-link {
+      font-size: 20px;
+      line-height: 1.5;
+      color:$color-header;
+      padding: 0.2rem 0.8rem;
+      border: 1px solid rgba(7, 12, 19, 0);
+      text-decoration: none;
+      position: relative;
+      display: block;
+      background-color: #fff;   
+      border-radius: 8px;
+      font-weight: 700;
+      width: 40px;
+      height: 40px;
+      .icon {
+        margin-left: $base-margin;
+        @include media-breakpoint-down-sm {
+          margin-left: $base-margin * 0;
+        }
+      }
+      svg {
+        display: block;
+      }
+      &:hover {
+        background-color: rgba(7, 12, 19, 0.04);
+        border-color: transparent;
+      }
+      &:focus {
+        background-color: $color-white;
+        color: $color-header;
+        box-shadow: none;
+      }
+    }
+    &.active {
+      .page-link {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        z-index: 3;
+        background-color: rgba(7, 12, 19, 0.04);
+        border-color: rgba(7, 12, 19, 0.1);
+      }
+    } 
+  
+    &.disabled {
+      .page-link {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: $color-header;
+        pointer-events: painted;
+        font-weight: $bold-font-weight !important;
+        font-size: 20px !important;
+        background-color: $color-white;
+        border-color: rgba(7, 12, 19, 0);
+        padding: 0.2rem 0 !important;
+        &:hover {
+          background-color: rgba(7, 12, 19, 0);
+          border-color: transparent;
+        }
+      }
+    }
+    
+  }
+}

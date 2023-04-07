@@ -1,0 +1,120 @@
+/********** 
+ 1. Default  Styles 
+**********/
+@use "sass:math";
+.row {
+  --bs-gutter-x: 1.75rem;
+}
+/*Font */
+body {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  color: $color-text;
+  background: #fff;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-header;
+  font-family: $font-secondary;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: $base-font-size * 4;
+}
+
+h2 {
+  font-size: $base-font-size * 3;
+}
+
+h3 {
+  font-size: $base-font-size * 2;
+}
+
+h4 {
+  font-size: $base-font-size * 1.5;
+}
+
+h5 {
+  font-size: $base-font-size * 1.25;
+}
+
+h6 {
+  font-size: $base-font-size * 1;
+}
+p {
+  font-size: $base-font-size;
+  color: $color-text;
+  line-height: 2;
+}
+a {
+  font-size: $base-font-size;
+  color: $color-text;
+  line-height: 1.5;
+  text-decoration: none;
+  display: inline-block;
+  a:hover {
+    color: $color-text;
+  }
+}
+
+/********** 
+   Custom Styles 
+**********/
+/* Dropdown Styles */
+.dropdown-item {
+  background-color: transparent;
+  border: 0;
+  &:hover,
+  &:focus {
+    color: #060a11 !important;
+    background: none !important;
+    background-color: #e9ecef;
+  }
+}
+/* Card Styles */
+.card {
+  border: none;
+}
+
+/* section-header style */
+.section-header {
+  padding: $base-padding * 4 0 $base-padding * 3;
+
+  @include media-breakpoint-down-lg {
+    text-align: center;
+  }
+  h2 {
+    position: relative;
+    margin-bottom: 12px;
+    @include media-breakpoint-down-sm {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* load more style */
+.next-more,
+.load-more {
+  color: $color-header;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: $medium-font-weight;
+  i {
+    margin-right: 10px;
+  }
+}
+.lode-next,
+.next-blog {
+  display: none;
+}

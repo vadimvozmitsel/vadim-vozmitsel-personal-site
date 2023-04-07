@@ -1,0 +1,35 @@
+//Import fonts from https://fonts.google.com/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+// Font Variables
+$font-primary: "Inter", sans-serif ;
+$font-secondary: "Manrope", sans-serif ;
+$base-font-size: 1rem;
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$bold-font-weight: 700;
+$extbold-font-weight: 800;
+$base-letter-spacing: 0.5px;
+
+//Colors Variables
+$color-white : #fff;
+$color-black: #000;
+$color-gray: #e8e8e8;
+$color-primary: #0026AD;
+$color-secondary: #9785FF;
+$color-warning: #ffefb5;
+$color-blue: #004aff;
+
+$color-header: #060A11;
+$color-text: #404152;
+$color-text-light: #aaaab7;
+
+// Spacer Variables
+$base-padding: 1rem;
+$base-margin: 1rem;
+
+// Transition Variables
+$base-transition: all 0.3s ease-in-out;
+
+//Others Varibles
+$base-border-width: 1px;
+$base-border-radius: 8px;

@@ -1,0 +1,57 @@
+/********** 
+15.  404 Page Styles
+**********/
+.error {
+  position: relative;
+  background: linear-gradient(239.24deg, #f4f7fe 22.34%, #fbfcff 83.1%);
+  &-shape-wrapper {
+    overflow: hidden;
+    bottom: 0%;
+    .shape-1,
+    .shape-2 {
+      position: absolute;
+      border-radius: 50%;
+      width: 686px;
+      height: 580px;
+      left: -10%;
+      top: -15%;
+      background: #b9ffe2;
+      mix-blend-mode: multiply;
+      opacity: 0.5;
+      filter: blur(60px);
+      @include media-breakpoint-down-xxl {
+        left: -20%;
+        top: -20%;
+      }
+      @include media-breakpoint-down-xl {
+        left: -30%;
+        top: -30%;
+      }
+    }
+    .shape-2 {
+      width: 712px;
+      height: 712px;
+      left: 70%;
+      top: -10%;
+      opacity: 1;
+      background: #cdf6ff;
+      @include media-breakpoint-down-xxl {
+        left: 75%;
+        top: -15%;
+      }
+      @include media-breakpoint-down-xl {
+        top: -30%;
+      }
+    }
+  }
+  &-content {
+    position: relative;
+    h3 {
+      color: $color-text;
+      font-weight: $bold-font-weight;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
