@@ -1,6 +1,8 @@
 //Import fonts from https://fonts.google.com/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
 // Font Variables
+$font-master: "MADE-Tommy-Soft", sans;
 $font-primary: "Inter", sans-serif ;
 $font-secondary: "Manrope", sans-serif ;
 $base-font-size: 1rem;
@@ -9,19 +11,117 @@ $medium-font-weight: 500;
 $bold-font-weight: 700;
 $extbold-font-weight: 800;
 $base-letter-spacing: 0.5px;
+$tommy-soft-thin: 200;
+$tommy-soft-light: 300;
+$tommy-soft-regular: 400;
+$tommy-soft-medium: 500;
+$tommy-soft-bold: 600;
+$tommy-soft-extra-bold: 700;
+$tommy-soft-black: 800; 
 
-//Colors Variables
-$color-white : #fff;
-$color-black: #000;
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-thin-200.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-light-300.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-regular-400.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-medium-500.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-bold-600.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-extra-bold-700.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MADE-Tommy-Soft";
+  src: url('../fonts/made-tommy-soft-black-800.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+// Master Color Variables
+
+//Global Colors
+$color-white : #FBFDFD;
+$color-black: #191D20;
+$color-black-ultra: #101213;
+$color-black-medium: #252e39;
+$color-black-light: #383b45;
 $color-gray: #e8e8e8;
-$color-primary: #0026AD;
+$color-primary: #7D3DFF;
 $color-secondary: #9785FF;
-$color-warning: #ffefb5;
+$color-contrast: #EFCC42;
+$color-warning: #FFFF00;
+$color-error: #ff0000;
+$color-success: #00ff00;
 $color-blue: #004aff;
-
-$color-header: #060A11;
-$color-text: #404152;
+$color-header: #191D20;
+$color-text: #f7f5f0;
 $color-text-light: #aaaab7;
+$color-text-gray: #666666;
+
+// Light theme
+$bg-color-light: #E5E7EB;
+$text-color-light: #474747;
+
+// Dark theme
+$bg-color-dark: #202529;
+$text-color-dark: #E5E7EB;
+
+// Default theme
+$bg-color: $bg-color-light;
+$text-color: $text-color-light;
+
+// Apply default theme
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.dark-theme {
+  background-color: $bg-color-dark;
+  color: $text-color-dark;
+}
+
+
 
 // Spacer Variables
 $base-padding: 1rem;
@@ -30,6 +130,6 @@ $base-margin: 1rem;
 // Transition Variables
 $base-transition: all 0.3s ease-in-out;
 
-//Others Varibles
+//Others Variables
 $base-border-width: 1px;
 $base-border-radius: 8px;

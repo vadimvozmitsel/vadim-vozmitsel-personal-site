@@ -3,20 +3,24 @@
 5. Navbar Styles 
 **********/
 @use "sass:math";
+
 .navbar {
   position: relative;
   display: flex;
   flex-wrap: wrap; // allow us to do the line break for collapsing content
-  align-items: center;
+  align-items: start;
   justify-content: space-between; // space out brand from logo
-  padding-top: $base-padding * 1.9;
+  padding-top: $base-padding * 1.5;
   padding-right: $base-padding * 1.25 ; // default: null
-  padding-bottom: $base-padding * 1.9;
+  padding-bottom: $base-padding * 1.5;
   padding-left: $base-padding * 1.25; // default: null
-  background-color: transparent;
+  background-color: $color-header;
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
+  border-bottom: 1px solid $color-header;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.8);
 }
+
 @include media-breakpoint-down-lg {
   .navbar {
     margin: $base-margin;
@@ -51,8 +55,8 @@
     display: none;
   }
 }
-//end navbar-brand-two
-//Respnsive MObile View
+//End navbar-brand-two
+//Responsive MObile View
 @include media-breakpoint-down-sm {
   .navbar-brand {
     flex: 1;
@@ -70,6 +74,11 @@
   list-style: none;
   justify-content: center;
   align-items: center;
+} 
+
+.nav-item:last-child {
+    margin-left: auto;
+}
 
   .nav-link {
     padding-right: $base-padding *  1.25 !important;
@@ -87,7 +96,7 @@
   .dropdown {
     .dropdown-menu {
       box-sizing: content-box;
-      background: $color-white;
+      background: $color-black-light;
       min-width: 188px;
       transition: $base-transition;
       border: 1px solid $color-gray;
@@ -126,7 +135,8 @@
       right: 15px;
     }
   }
-  /* Dropdown Menu for large screen */
+
+  /* Dropdown Menu for large screens */
   @include media-breakpoint-up-lg {
     .dropdown {
       .dropdown-menu {
@@ -147,17 +157,18 @@
       }
     }
   }
+
   /* Dropdown Menu for Small screen */
   @include media-breakpoint-down-lg {
-    margin-top: $base-margin * 1.5 !important;
     .nav-link {
+      margin-top: $base-margin * 1.5 !important;
       margin-bottom: 0.3rem;
       position: relative;
       display: flex;
       justify-content: center;
       color: $color-header;
-      font-weight: $extbold-font-weight;
-      font-family: $font-secondary;
+      font-weight: $tommy-soft-medium;
+      font-family: $font-master;
     }
 
     .dropdown {
@@ -200,13 +211,13 @@
       }
     }
   }
-}
+
 //start navbar two
 .navbar-two {
   .nav-link {
-    color: #dfdfdf;
+    color: $color-black-ultra;
     &:hover {
-      color: $color-white;
+      color: $color-black-light;
     }
   }
   @include media-breakpoint-down-lg {
@@ -217,11 +228,11 @@
     }
   }
   .btn-links {
-    color: $color-white;
+    color: $color-text;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid transparent;
     span {
-      color: $color-white;
+      color: $color-text;
       &:nth-child(1) {
         svg {
           path {
@@ -243,7 +254,7 @@
     }
   }
 }
-//end navbar two
+//End navbar two
 //Sticky Navbar
 
 .sticky-nav {
@@ -251,7 +262,7 @@
   background: $color-white;
   box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.04);
   .btn-gray-dark {
-    background: $color-white;
+    background: $color-black-medium;
   }
   .navbar-brand-two {
     .white-logo {
@@ -285,7 +296,7 @@
 //Customize style for mobile
 @include media-breakpoint-down-lg {
   .navbar {
-    background: $color-white;
+    background: $color-header;
   }
   .navbar-brand-two {
     .white-logo {
@@ -326,12 +337,12 @@
 
 @include media-breakpoint-down-lg {
   .navbar {
-    background: $color-white;
+    background: $color-header;
   }
 }
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  background-color: $color-white; // remove default button style
+  background-color: $color-black-light; // remove default button style
   border: $base-border-width solid #aaaab7; // remove default button style
 }
 
@@ -351,4 +362,138 @@
 }
 .dropdown-toggle::after {
   margin-left: 0;
+}
+
+.contact-button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: $color-gray;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.contact-button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 16px 5px rgba(0, 142, 236, 0.32);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.contact-button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.contact-button::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: transparent;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.contact-button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: flex;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.5s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }

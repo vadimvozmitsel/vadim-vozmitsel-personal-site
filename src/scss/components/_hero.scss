@@ -1,9 +1,7 @@
-/********** 
- 6. Hero Styles 
-**********/
+/********** 6. Hero Styles **********/
 .hero {
   position: relative;
-  background: linear-gradient(239.24deg, #f4f7fe 22.34%, #fbfcff 83.1%);
+  background: linear-gradient(239.24deg, $color-black-ultra 22.34%, $color-black 83.1%);
   @include media-breakpoint-down-md {
     overflow: hidden;
   }
@@ -22,7 +20,7 @@
       right: 15%;
       mix-blend-mode: multiply;
       background: #fffbda;
-      filter: blur(60px);
+      filter: blur(80px);
       @include media-breakpoint-down-xxl {
         right: -5%;
       }
@@ -40,7 +38,7 @@
       left: 50%;
       width: 418px;
       height: 418px;
-      background: #85fff8;
+      background: #661BFF;
       opacity: 0.7;
       @include media-breakpoint-down-xxl {
         left: 45%;
@@ -144,7 +142,8 @@
       }
     }
   }
-  // start hero-two style
+
+  // HERO 2: hero-two style 
   &-two {
     background-color: #060a11;
     &-shape-wrapper {
@@ -283,4 +282,9 @@
       }
     }
   }
+}
+
+.hero-h1-text {
+  font-family: $tommy-soft-black;
+  color: $color-text;
 }
