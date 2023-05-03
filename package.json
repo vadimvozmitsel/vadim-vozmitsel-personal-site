@@ -1,13 +1,13 @@
 {
-  "name": "staticmania-development-kit",
+  "name": "vadim-vozmitsel-home-page",
   "version": "1.0.1",
   "description": "Gulp environment for creating Website",
   "keywords": [
     "gulp",
     "frontend"
   ],
-  "author": "StaticMania",
-  "license": "MIT",
+  "author": "Vadim Vozmitsel",
+  "license": "Private",
   "scripts": {
     "build": "gulp",
     "dev": "gulp dev"
