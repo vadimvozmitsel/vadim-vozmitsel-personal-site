@@ -10,6 +10,9 @@ const rimraf = require("rimraf");
 const uglify = require("gulp-uglify");
 const uglifycss = require("gulp-uglifycss");
 
+// Import package.json
+const pkg = require("./package.json");
+
 // Paths
 const path = {
   src: {
@@ -25,7 +28,7 @@ const path = {
     blur: "src/images/**/*.jpg",
   },
   build: {
-    dir: "dist/",
+    dir: pkg.outputDir + "/", // Use outputDir value from package.json
   },
 };
 

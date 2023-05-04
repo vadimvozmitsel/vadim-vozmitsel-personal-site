@@ -1,7 +1,7 @@
 {
   "name": "vadim-vozmitsel-home-page",
   "version": "1.0.1",
-  "description": "Gulp environment for creating Website",
+  "description": "Gulp Production Environment with Bootstrap 5",
   "keywords": [
     "gulp",
     "frontend"
@@ -29,5 +29,6 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0"
-  }
+  },
+  "outputDir": "public"
 }
