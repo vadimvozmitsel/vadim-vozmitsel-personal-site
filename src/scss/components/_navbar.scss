@@ -109,17 +109,18 @@
       &:after {
         content: "";
         font-family: $font-master;
+        color: #d8dbe0;
         font-size: 1.4rem;
         font-style: normal;
         font-weight: normal;
         text-decoration: inherit;
         border-top: none;
-        padding:  0;
+        padding:  0px;
         margin-right: 0 !important;
       }
     }
     li.dropdown-megamenu-column-items {
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.8rem;
       &:last-child {
         margin-bottom: 0;
       }
@@ -194,7 +195,7 @@
         transform-origin: 0 0 0;
         height: auto;
         text-align: center;
-        background: #f3f3f3;
+        background: $color-black-medium;
         width: auto;
         border-radius: 0;
       }
@@ -354,8 +355,8 @@
 }
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  background-color: $color-black-light; // remove default button style
-  border: $base-border-width solid #aaaab7; // remove default button style
+  background-color: $color-black-ultra; // remove default button style
+  border: $base-border-width solid #252e39; // remove default button style
 }
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-default {

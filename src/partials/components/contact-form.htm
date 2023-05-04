@@ -3,6 +3,16 @@
   Contact  page
   #############
 -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("-TI53nUfy-k6HetFa");
+   })();
+</script>
+
+
 <section class="contact-form pt-8 pt-xxl-15 pb-xxl-7 pb-0">
   <div class="contact-form-shape-wrapper position-absolute w-100 h-100">
     <div class="shape-1">
@@ -17,7 +27,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row mt-8">
       <!--== Start Contact Form Area ==-->
       <div class="col-lg-8 big-form">
         <form class="row">
@@ -33,7 +43,7 @@
           </div>
           <div class="col-md-12 col-lg-12">
             <select class="form-select" aria-label="Default select example">
-              <option selected>Topic</option>
+              <option selected>General</option>
               <option value="1">Product Management</option>
               <option value="2">Product Design</option>
               <option value="3">Development</option>
@@ -41,7 +51,7 @@
             </select>
           </div>
           <div class="col-12">
-            <textarea class="form-control" id="floatingTextarea2" placeholder="Submit" rows="8"
+            <textarea class="form-control" id="floatingTextarea2" placeholder="Message" rows="8"
               spellcheck="false"></textarea>
           </div>
           <div class="col-8">
@@ -53,24 +63,6 @@
       </div>
       <!--== End Contact Form Area ==-->
       <!--== Start Contact Form widget ==-->
-      <div class="col-lg-4">
-        <div class="big-form">
-          <ul class="list-unstyled">
-            <li>
-              <span class="font-bold">Email:</span>
-              <a href="mailto:info@staticmania.com">vadim@t3ss3ract.com</a>
-            </li>
-            <li>
-              <span class="font-bold">Phone:</span>
-              <a href="tel:+8855545554 ">(415) 415-4154</a>
-            </li>
-            <li>
-              <span class="font-bold">Twitter:</span>
-              <a href="https://twitter.com/vadimvozmitsel">https://twitter.com/vadimvozmitsel</a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <!--== End Contact Form widget ==-->
     </div>
   </div>

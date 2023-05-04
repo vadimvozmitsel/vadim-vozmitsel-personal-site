@@ -43,24 +43,17 @@
         <!--Navbar Menus-->
         <div class="d-flex align-items-center">
           <!--Navbar Toggler-->
-          <button class="navbar-toggler p-3 me-1" type="button" data-bs-toggle="collapse"
+          <button class="navbar-toggler px-2 me-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-default">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.125 10H16.875" stroke="#060A11" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M3.125 5H16.875" stroke="#060A11" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M3.125 15H16.875" stroke="#060A11" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
+            <div class="navbar-toggler-default">
+              <img src="images/menu-1.svg" alt="Your Icon Description" width="32" height="32">
+            </div>
             <span class="navbar-toggler-toggled">
-              <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.5 6.5L6.5 21.5" stroke="#404152" stroke-width="3" stroke-linecap="round"
+              <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.5 6.5L6.5 21.5" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
                   stroke-linejoin="round" />
-                <path d="M21.5 21.5L6.5 6.5" stroke="#404152" stroke-width="3" stroke-linecap="round"
+                <path d="M21.5 21.5L6.5 6.5" stroke="#ffffff" stroke-width="1" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
             </span>
@@ -69,10 +62,6 @@
           <!--Navbar Menus Collapse-->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-xxl-6 ms-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link  dropdown-toggle " href="index.html" role="button" data-bs-toggle="dropdown">Home</a>
-              </li
-              
                 <!-- Contact Button and Toggle Switch -->
                 <div class="d-flex align-items-center">
                 <div class="container">
@@ -94,6 +83,16 @@
   Contact  page
   #############
 -->
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("-TI53nUfy-k6HetFa");
+   })();
+</script>
+
+
 <section class="contact-form pt-8 pt-xxl-15 pb-xxl-7 pb-0">
   <div class="contact-form-shape-wrapper position-absolute w-100 h-100">
     <div class="shape-1">
@@ -108,7 +107,7 @@
     </div>
   </div>
   <div class="container">
-    <div class="row">
+    <div class="row mt-8">
       <!--== Start Contact Form Area ==-->
       <div class="col-lg-8 big-form">
         <form class="row">
@@ -124,7 +123,7 @@
           </div>
           <div class="col-md-12 col-lg-12">
             <select class="form-select" aria-label="Default select example">
-              <option selected>Topic</option>
+              <option selected>General</option>
               <option value="1">Product Management</option>
               <option value="2">Product Design</option>
               <option value="3">Development</option>
@@ -132,7 +131,7 @@
             </select>
           </div>
           <div class="col-12">
-            <textarea class="form-control" id="floatingTextarea2" placeholder="Submit" rows="8"
+            <textarea class="form-control" id="floatingTextarea2" placeholder="Message" rows="8"
               spellcheck="false"></textarea>
           </div>
           <div class="col-8">
@@ -144,24 +143,6 @@
       </div>
       <!--== End Contact Form Area ==-->
       <!--== Start Contact Form widget ==-->
-      <div class="col-lg-4">
-        <div class="big-form">
-          <ul class="list-unstyled">
-            <li>
-              <span class="font-bold">Email:</span>
-              <a href="mailto:info@staticmania.com">vadim@t3ss3ract.com</a>
-            </li>
-            <li>
-              <span class="font-bold">Phone:</span>
-              <a href="tel:+8855545554 ">(415) 415-4154</a>
-            </li>
-            <li>
-              <span class="font-bold">Twitter:</span>
-              <a href="https://twitter.com/vadimvozmitsel">https://twitter.com/vadimvozmitsel</a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <!--== End Contact Form widget ==-->
     </div>
   </div>
@@ -261,11 +242,6 @@
                 </li>
                 <li class="nav-item ">
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Dribbble</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="blog.html">Blog</a>
                 </li>
               </ul>
             </div>

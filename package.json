@@ -26,5 +26,8 @@
     "gulp-uglifycss": "^1.1.0",
     "gulp-util": "^3.0.8",
     "sass": "^1.41.0"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0"
   }
 }

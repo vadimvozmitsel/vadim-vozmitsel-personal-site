@@ -13589,16 +13589,17 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
 .dropdown-toggle:after {
   content: "";
   font-family: "MADE-Tommy-Soft", sans;
+  color: #d8dbe0;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: normal;
   text-decoration: inherit;
   border-top: none;
-  padding: 0;
+  padding: 0px;
   margin-right: 0 !important;
 }
 .dropdown li.dropdown-megamenu-column-items {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.8rem;
 }
 .dropdown li.dropdown-megamenu-column-items:last-child {
   margin-bottom: 0;
@@ -13668,7 +13669,7 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
     transform-origin: 0 0 0;
     height: auto;
     text-align: center;
-    background: #f3f3f3;
+    background: #252e39;
     width: auto;
     border-radius: 0;
   }
@@ -13799,8 +13800,8 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
   }
 }
 .navbar-toggler {
-  background-color: #383b45;
-  border: 1px solid #aaaab7;
+  background-color: #101213;
+  border: 1px solid #252e39;
 }
 
 .navbar-toggler[aria-expanded=true] .navbar-toggler-default {
@@ -17619,7 +17620,8 @@ button-submit:active {
   border: 1px solid #252e39;
   box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.5);
   transition: all 0.3s;
-  padding: 40px;
+  padding: 16px;
+  margin-bottom: 40px;
 }
 
 .big-form:hover {
