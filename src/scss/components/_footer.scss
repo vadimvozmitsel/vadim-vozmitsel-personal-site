@@ -3,8 +3,8 @@
 **********/
 .footer {
   position: relative;
-  padding-bottom: 90px;
-  background: $color-white;
+  padding-bottom: 120px;
+  background: $color-black-ultra;
   @include media-breakpoint-down-lg {
     padding-bottom: 60px;
   }
@@ -23,7 +23,7 @@
       top: 20%;
       background: #f6ff8e;
       mix-blend-mode: multiply;
-      opacity: 0.4;
+      opacity: 0.01;
       filter: blur(60px);
       @include media-breakpoint-down-xxl {
         left: 0%;
@@ -43,7 +43,7 @@
       top: 10%;
       background: #8eebff;
       mix-blend-mode: screen;
-      opacity: 0.65;
+      opacity: 0.01;
       @include media-breakpoint-down-lg {
         left: 0%;
       }

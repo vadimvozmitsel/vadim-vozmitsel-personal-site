@@ -112,9 +112,11 @@
       }
     }
   }
+
   .card {
-    border: $base-border-width solid $color-gray;
-    border-radius: 5px;
+    background: $color-black-ultra;
+    border: $base-border-width solid $color-black-light;
+    border-radius: 16px;
     box-shadow: none;
     padding: $base-padding * 6.75 $base-padding * 5 $base-padding * 0;
     @include media-breakpoint-down-xxl {
@@ -139,7 +141,7 @@
           padding-bottom: $base-padding * 2;
         }
         h5 {
-          color: $color-text-light;
+          color: $color-text;
           font-weight: $medium-font-weight;
         }
       }

@@ -52,9 +52,10 @@
     transition: $base-transition;
     text-align: center;
     padding: $base-padding * 3.75 $base-padding * 1.25 $base-padding * 3.2;
-    border-radius: 5px;
-    box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.04);
-    background: $color-white;
+    border-radius: 12px;
+    border: 1px solid $color-black-medium;
+    box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.08);
+    background: $color-dark-card;
     z-index: 100;
     margin-top: 0.75rem;
 
@@ -71,6 +72,11 @@
       h4 {
         color: $color-text;
       }
+    }
+
+    &:hover {
+      box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.16);
+      border-color: purple;
     }
 
     @include media-breakpoint-down-xl {

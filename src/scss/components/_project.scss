@@ -3,6 +3,52 @@
 **********/
 @use "sass:math";
 
+.button-smooth {
+  width: auto;
+  position: relative;
+  height: auto;
+  border: 1px solid #fefefe;
+  outline: none;
+  background-color: #6b60d8;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button-smooth::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+button-smooth::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+button-smooth:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+button-smooth:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
 .project,
 .project-two,
 .project-three {
@@ -58,11 +104,11 @@
     }
   }
   .one {
-    background-color: $color-warning;
+    background-color: transparent;
     padding: $base-padding * 4 $base-padding * 4 $base-padding * 0 $base-padding *
       5;
     position: relative;
-    border-radius: 5px;
+    border-radius: 32px;
     @include media-breakpoint-down-lg {
       padding: $base-padding * 2 $base-padding * 2 $base-padding * 0
         $base-padding * 2;
@@ -81,17 +127,17 @@
   &-item {
     overflow: hidden;
     display: flex;
-    background-color: #e6f1ff;
+    background-color: #4a40d5;
     padding: $base-padding * 2 $base-padding * 2 $base-padding * 0 $base-padding *
       3;
-    border-radius: 5px;
+    border-radius: 32px;
     &.bg-light-dark {
       background-color: #5960ff !important;
     }
     @include media-breakpoint-down-lg {
       display: block;
       text-align: center;
-      border-radius: 5px;
+      border-radius: 32px;
       padding: $base-padding * 2 $base-padding * 2 $base-padding * 0
         $base-padding * 2;
     }
@@ -124,10 +170,10 @@
         }
       }
       h5 {
-        font-size: 22px;
+        font-size: 36px;
         margin-bottom: $base-margin * 0.5;
         font-weight: 600;
-        font-family: $font-primary;
+        font-family: $font-master;
       }
       a {
         font-size: 14px;
@@ -159,14 +205,14 @@
       transform: translate(-50%, -50%);
       h5 {
         color: $color-white;
-        font-size: 22px;
-        margin-bottom: $base-margin * 0.5;
-        font-weight: 600;
-        font-family: $font-primary;
+        font-size: 36px;
+        margin-bottom: $base-margin * 0.7;
+        font-weight: 800;
+        font-family: $font-master;
       }
       p {
         color: $color-white;
-        margin-bottom: $base-margin * 2.5;
+        margin-bottom: $base-margin * 3.0;
         @include media-breakpoint-down-xxl {
           margin-bottom: $base-margin * 3;
         }
@@ -181,22 +227,22 @@
     &-banner {
       position: relative;
       align-self: flex-end;
-      border-radius: 5px;
+      border-radius: 32px;
       overflow: hidden;
       &::before {
         position: absolute;
         content: "";
         width: 100%;
         height: 100%;
-        background: $color-blue;
-        opacity: 0.7;
+        background: $color-black-light;
+        opacity: 0.6;
         
       }
     }
     &-left{
       .project-item-two-banner {
         &::before {
-          background: mix($color-black, $color-blue, 41.5%);     
+          background: mix($color-black, $color-blue, 20.5%);     
         }
       }
     }

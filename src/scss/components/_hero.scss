@@ -1,4 +1,82 @@
 /********** 6. Hero Styles **********/
+
+.container-fluid {
+  max-width: auto;
+}
+
+.card-fancy {
+  width: auto;
+  height: auto;
+  background: #07182E;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.card-fancy h2 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+
+.card-fancy::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-fancy::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  inset: 5px;
+  border-radius: 15px;
+}  
+/* .card-fancy:hover:before {
+  background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+  animation: rotBGimg 3.5s linear infinite;
+} */
+
+.card-zoom {
+  height: auto;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2-zoom {
+  height: auto;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  transition: all .2s;
+ }
+ 
+ .card2-zoom:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card-zoom:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+ }
+
 .hero {
   position: relative;
   background: linear-gradient(239.24deg, $color-black-ultra 22.34%, $color-black 83.1%);
@@ -101,7 +179,7 @@
       top: 20%;
       right: 15%;
       width: 629px;
-      height: 630px;
+      height: 820px;
       background: #9785ff;
       filter: blur(60px);
       mix-blend-mode: multiply;
@@ -146,6 +224,7 @@
       position: relative;
       img {
         width: 100%;
+        height: 100%;
       }
     }
   }
@@ -244,9 +323,26 @@
     margin-bottom: $base-margin;
   }
 
-  // start hero-three style
+  .hero-bg-image {
+    position: relative;
+  }
+  
+  .hero-bg-image img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  // Hero Three Style
   &-three {
-    background: linear-gradient(239.24deg, #f4f7fe 22.34%, #fbfcff 83.1%);
+    background: url('/images/hero/hero-image-5.png');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1000px;
     &-shape-wrapper {
       overflow: hidden;
       bottom: 0%;
@@ -255,11 +351,11 @@
       .shape-3 {
         position: absolute;
         border-radius: 50%;
-        top: -60%;
+        top: -20%;
         width: 686px;
-        height: 686px;
+        height: 820px;
         left: 50%;
-        background: #fffbda;
+        background: #181818;
         mix-blend-mode: multiply;
         filter: blur(60px);
         @include media-breakpoint-down-xl {
@@ -298,17 +394,35 @@
         }
       }
     }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 40%);
+      z-index: 1;
+    }
+  
   }
 }
 
 .hero-h1-text {
-  font-family: $tommy-soft-black;
+  font-family: $tommy-soft-bold;
   color: $color-text;
+  margin-top: 24px;
 }
 
 .hero-paragraph {
   font-family: $tommy-soft-medium;
   color: $color-text-light;
+}
+
+.hero-image-large {
+  width: 150%; /* Increase the width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: none; /* Override the max-width property from img-fluid */
 }
 
 // Custom Contact Button //

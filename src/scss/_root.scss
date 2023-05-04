@@ -23,7 +23,7 @@ h5,
 h6 {
   color: $color-text;
   font-family: $font-master;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -82,7 +82,7 @@ a {
 }
 /* Card Styles */
 .card {
-  border: none;
+  border: $color-black-light;
 }
 
 /* section-header style */

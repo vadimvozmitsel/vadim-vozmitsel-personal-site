@@ -9,8 +9,8 @@
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.875rem);
-  padding-left: var(--bs-gutter-x, 0.875rem);
+  padding-right: var(--bs-gutter-x, 1.5rem);
+  padding-left: var(--bs-gutter-x, 1.5rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -52,7 +52,7 @@
   .container-md,
   .container-sm,
   .container {
-    max-width: 1170px;
+    max-width: 1440px;
   }
 }
 
