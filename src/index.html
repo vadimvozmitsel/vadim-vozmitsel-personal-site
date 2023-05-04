@@ -4,19 +4,17 @@
 "nav": "home"
 })
 
-@@include('components/hero.htm')
-
-@@include('components/services.htm')
-
-@@include('components/resume.htm',{
-"padding" : "pt-xxl-14 pb-xxl-10 pb-lg-8 pt-md-9 pb-6",
-})
+@@include('components/hero-three.htm')
 
 @@include('components/project.htm',{
-"padding" : "pb-xxl-14 pb-md-9 pb-6",
-"text-align" : "",
-"display": "",
+  "padding" : "pb-xxl-7 pb-xl-0 pb-0",
+  "display": "d-none",
+  })
 
+@@include('components/services-two.htm')
+
+@@include('components/resume.htm',{
+"padding" : "pt-xxl-14 pb-xxl-10 pb-md-8 pt-sm-9 pt-7 pb-8",
 })
 
 @@include('components/feedbacks.htm')

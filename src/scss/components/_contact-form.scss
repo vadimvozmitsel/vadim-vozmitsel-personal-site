@@ -1,8 +1,8 @@
 /********** 
-14. contact Page Styles
+14. Contact Page Styles
 **********/
 
-/* Defult Form Control styles */
+/* Default Form Control styles */
 .form-control {
   display: block;
   width: 100%;
@@ -12,17 +12,20 @@
   font-weight: $medium-font-weight;
   line-height: 1.7;
   color: $color-text;
-  background-color: $color-white;
-  border: 1px solid #cbd4db;
+  background-color: $color-black-ultra;
+  border: 2px solid $color-black-medium;
+  border-radius: 18px;
   appearance: none; // Fix appearance for date inputs in Safari
   &:focus {
     border-color: #060a11;
+    background-color: $color-black-ultra;
     outline: 0;
     box-shadow: none;
+    border: 1px solid $color-primary;
   }
   &::-webkit-input-placeholder {
     /* Edge */
-    color: $color-text;
+    color: $color-black;
     opacity: 1;
     font-size: 18px;
     font-weight: $medium-font-weight;
@@ -37,11 +40,10 @@
     font-size: 18px;
     font-weight: $medium-font-weight;
     line-height: 1.7;
-    color: $color-text;
   }
 
   &::placeholder {
-    color: $color-text;
+    color: $color-black-medium;
     opacity: 1;
     font-size: 18px;
     font-weight: $medium-font-weight;
@@ -60,8 +62,8 @@
   font-weight: $medium-font-weight;
   line-height: 1.7;
   color: $color-text;
-  background-color: $color-white;
-  border: 1px solid #cbd4db;
+  background-color: $color-black-ultra;
+  border: 1px solid $color-black-medium;
 
   &:focus {
     border-color: #060a11;
@@ -87,8 +89,8 @@
       width: 686px;
       height: 686px;
       left: -12%;
-      top: -20%;
-      background: #b9ffe2;
+      top: -60%;
+      background: $color-black;
       mix-blend-mode: multiply;
       opacity: 0.5;
       filter: blur(60px);
@@ -109,7 +111,7 @@
       left: 77%;
       top: 0;
       opacity: 1;
-      background: #cdf6ff;
+      background: #7D3DFF;
       @include media-breakpoint-down-xl {
         left: 70%;
         top: -30%;
@@ -122,7 +124,7 @@
     .shape-3 {
       left: 5%;
       top: 20%;
-      background: #fffdcd;
+      background: $color-primary;
       @include media-breakpoint-down-xxl {
         left: 15%;
         top: 12%;
@@ -133,8 +135,8 @@
       top: 30%;
       width: 898px;
       height: 807px;
-      background: #fbcaff;
-      opacity: 0.35;
+      background: #391491;
+      opacity: 0.8;
       @include media-breakpoint-down-xxl {
         left: 25%;
       }
@@ -147,8 +149,8 @@
       top: 65%;
       width: 486px;
       height: 486px;
-      background: #86ffcc;
-      opacity: 0.3;
+      background: #5100E0;
+      opacity: 0.70;
       @include media-breakpoint-down-xxl {
         left: 0%;
         top: 60%;
@@ -168,10 +170,11 @@
     }
   }
   form {
-    background-color: $color-white;
+    background-color: #1A1A25;
     padding: $base-padding * 3.75;
     margin-right: 2px;
-    border-radius: 5px;
+    border-radius: 16px;
+    border: $color-black-medium;
     @include media-breakpoint-down-lg {
       padding: $base-padding * 2;
       text-align: center;
@@ -193,7 +196,7 @@
     }
   }
   &-widget {
-    background-color: $color-white;
+    background-color: $color-black;
     border-radius: 5px;
     padding: $base-padding * 4 $base-padding * 2.5 $base-padding * 2;
     @include media-breakpoint-down-xl {
@@ -233,4 +236,49 @@
       }
     }
   }
+}
+
+button-submit {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+button-submit:hover {
+  background: #c4e201;
+}
+
+button-submit > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+button-submit:hover svg {
+  transform: translateX(5px);
+}
+
+button-submit:active {
+  transform: scale(0.95);
+}
+
+.big-form {
+  background-color: #1A1A25;
+  border-radius: 16px;
+  border: 1px solid #252e39;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.5);
+  transition: all 0.3s;
+  padding: 40px;
+}
+
+.big-form:hover {
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 1);
+  border-color: #4a40d5;
 }

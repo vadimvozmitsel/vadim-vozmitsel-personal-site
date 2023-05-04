@@ -3,8 +3,9 @@
 **********/
 .footer {
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 64px;
   background: $color-black-ultra;
+  border-top: 1px solid $color-black-light;
   @include media-breakpoint-down-lg {
     padding-bottom: 60px;
   }
@@ -111,7 +112,7 @@
           margin-right: $base-margin * 0;
         }
         a {
-          background-color: $color-text;
+          background-color: $color-black-medium;
           border-radius: 50%;
           width: 40px;
           height: 40px;

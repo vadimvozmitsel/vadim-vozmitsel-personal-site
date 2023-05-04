@@ -502,7 +502,7 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 1rem 1.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   border-radius: 0.5rem;
 }
 
@@ -13509,14 +13509,14 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
   background-color: #191D20;
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
-  border-bottom: 1px solid #191D20;
+  border-bottom: 2px solid #252e39;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 991.98px) {
   .navbar {
     margin: 1rem;
-    padding: 1.5rem 0;
+    padding: 1.8rem 0;
     border-radius: 0.5rem;
     width: calc(100% - 32px) !important;
   }
@@ -13528,7 +13528,7 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
   }
 }
 .navbar-brand {
-  padding-top: -14px;
+  padding-top: -10px;
   padding-bottom: 0;
   margin-right: 1rem;
   white-space: nowrap;
@@ -13719,10 +13719,10 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
 .sticky-nav {
   padding: 1rem 2rem !important;
   background: #101213;
-  -webkit-backdrop-filter: blur(40px);
-          backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
   /* Adjust the blur intensity as needed */
-  opacity: 0.9;
+  -webkit-backdrop-filter: blur(40px);
+  opacity: 0.99;
   box-shadow: 0px 45px 80px rgba(0, 0, 0, 0.04);
 }
 @supports ((-webkit-backdrop-filter: blur(40px)) or (backdrop-filter: blur(40px))) or (-webkit-backdrop-filter: blur(40px)) {
@@ -14346,14 +14346,15 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
 .hero-three {
   background: url("/images/hero/hero-image-5.png");
   position: relative;
+  border-bottom: #252e39;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 1000px;
+  height: auto;
 }
 .hero-three-shape-wrapper {
   overflow: hidden;
-  bottom: 0%;
+  bottom: 10%;
 }
 .hero-three-shape-wrapper .shape-1,
 .hero-three-shape-wrapper .shape-2,
@@ -14423,6 +14424,7 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
   content: "";
   position: absolute;
   bottom: 0;
+  border-bottom: 1px solid #252e39;
   left: 0;
   right: 0;
   height: 100%;
@@ -14450,29 +14452,30 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
   /* Override the max-width property from img-fluid */
 }
 
-button {
+contact-button {
   position: relative;
-  padding: 1em 1.8em;
+  padding: 1em 2.5em;
   outline: none;
   border: 1px solid #303030;
-  background: #212121;
+  background: #ebebeb;
   color: #ae00ff;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 15px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  background-color: #f7f5f0;
   overflow: hidden;
-  transition: 0.2s;
+  transition: 0.4s;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
 }
 
-button:hover {
+contact-button:hover {
   box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
   transition-delay: 0.6s;
 }
 
-button span {
+contact-button span {
   position: absolute;
 }
 
@@ -17296,9 +17299,9 @@ button-smooth:hover {
 }
 
 /********** 
-14. contact Page Styles
+14. Contact Page Styles
 **********/
-/* Defult Form Control styles */
+/* Default Form Control styles */
 .form-control {
   display: block;
   width: 100%;
@@ -17308,16 +17311,19 @@ button-smooth:hover {
   font-weight: 500;
   line-height: 1.7;
   color: #f7f5f0;
-  background-color: #FBFDFD;
-  border: 1px solid #cbd4db;
+  background-color: #101213;
+  border: 2px solid #252e39;
+  border-radius: 18px;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
 .form-control:focus {
   border-color: #060a11;
+  background-color: #101213;
   outline: 0;
   box-shadow: none;
+  border: 1px solid #7D3DFF;
 }
 .form-control:-ms-input-placeholder {
   /* Internet Explorer */
@@ -17326,10 +17332,9 @@ button-smooth:hover {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.7;
-  color: #f7f5f0;
 }
 .form-control::-moz-placeholder {
-  color: #f7f5f0;
+  color: #252e39;
   opacity: 1;
   font-size: 18px;
   font-weight: 500;
@@ -17337,7 +17342,7 @@ button-smooth:hover {
   color: #f7f5f0;
 }
 .form-control::placeholder {
-  color: #f7f5f0;
+  color: #252e39;
   opacity: 1;
   font-size: 18px;
   font-weight: 500;
@@ -17355,8 +17360,8 @@ button-smooth:hover {
   font-weight: 500;
   line-height: 1.7;
   color: #f7f5f0;
-  background-color: #FBFDFD;
-  border: 1px solid #cbd4db;
+  background-color: #101213;
+  border: 1px solid #252e39;
 }
 .form-select:focus {
   border-color: #060a11;
@@ -17384,8 +17389,8 @@ button-smooth:hover {
   width: 686px;
   height: 686px;
   left: -12%;
-  top: -20%;
-  background: #b9ffe2;
+  top: -60%;
+  background: #191D20;
   mix-blend-mode: multiply;
   opacity: 0.5;
   filter: blur(60px);
@@ -17424,7 +17429,7 @@ button-smooth:hover {
   left: 77%;
   top: 0;
   opacity: 1;
-  background: #cdf6ff;
+  background: #7D3DFF;
 }
 @media (max-width: 1199.98px) {
   .contact-form-shape-wrapper .shape-2 {
@@ -17441,7 +17446,7 @@ button-smooth:hover {
 .contact-form-shape-wrapper .shape-3 {
   left: 5%;
   top: 20%;
-  background: #fffdcd;
+  background: #7D3DFF;
 }
 @media (max-width: 1399.98px) {
   .contact-form-shape-wrapper .shape-3 {
@@ -17454,8 +17459,8 @@ button-smooth:hover {
   top: 30%;
   width: 898px;
   height: 807px;
-  background: #fbcaff;
-  opacity: 0.35;
+  background: #391491;
+  opacity: 0.8;
 }
 @media (max-width: 1399.98px) {
   .contact-form-shape-wrapper .shape-4 {
@@ -17472,8 +17477,8 @@ button-smooth:hover {
   top: 65%;
   width: 486px;
   height: 486px;
-  background: #86ffcc;
-  opacity: 0.3;
+  background: #5100E0;
+  opacity: 0.7;
 }
 @media (max-width: 1399.98px) {
   .contact-form-shape-wrapper .shape-5 {
@@ -17498,10 +17503,11 @@ button-smooth:hover {
   }
 }
 .contact-form form {
-  background-color: #FBFDFD;
+  background-color: #1A1A25;
   padding: 3.75rem;
   margin-right: 2px;
-  border-radius: 5px;
+  border-radius: 16px;
+  border: #252e39;
 }
 @media (max-width: 991.98px) {
   .contact-form form {
@@ -17527,7 +17533,7 @@ button-smooth:hover {
   border-radius: 8px;
 }
 .contact-form-widget {
-  background-color: #FBFDFD;
+  background-color: #191D20;
   border-radius: 5px;
   padding: 4rem 2.5rem 2rem;
 }
@@ -17574,6 +17580,51 @@ button-smooth:hover {
   font-size: 1.25rem;
   font-weight: 800;
   font-family: "Manrope", sans-serif;
+}
+
+button-submit {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #cfef00;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+button-submit:hover {
+  background: #c4e201;
+}
+
+button-submit > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+button-submit:hover svg {
+  transform: translateX(5px);
+}
+
+button-submit:active {
+  transform: scale(0.95);
+}
+
+.big-form {
+  background-color: #1A1A25;
+  border-radius: 16px;
+  border: 1px solid #252e39;
+  box-shadow: 0px 8px 16px rgba(17, 17, 17, 0.5);
+  transition: all 0.3s;
+  padding: 40px;
+}
+
+.big-form:hover {
+  box-shadow: 0px 8px 16px #111111;
+  border-color: #4a40d5;
 }
 
 /********** 
@@ -17795,8 +17846,9 @@ button-smooth:hover {
 **********/
 .footer {
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 64px;
   background: #101213;
+  border-top: 1px solid #383b45;
 }
 @media (max-width: 991.98px) {
   .footer {
@@ -17943,7 +17995,7 @@ button-smooth:hover {
   margin-right: 0rem;
 }
 .footer-description ul li a {
-  background-color: #f7f5f0;
+  background-color: #252e39;
   border-radius: 50%;
   width: 40px;
   height: 40px;
