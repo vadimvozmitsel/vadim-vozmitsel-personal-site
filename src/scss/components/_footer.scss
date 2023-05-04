@@ -24,7 +24,7 @@
       top: 20%;
       background: #f6ff8e;
       mix-blend-mode: multiply;
-      opacity: 0.01;
+      opacity: 0.9;
       filter: blur(60px);
       @include media-breakpoint-down-xxl {
         left: 0%;
@@ -77,25 +77,25 @@
   }
   &-wraper {
     position: relative;
-    padding-top: $base-padding * 4;
+    padding-top: $base-padding * 1;
     display: flex;
     align-items: center;
-    border-top: $base-border-width solid rgba(0, 0, 0, 0.1);
+    border-top: $base-border-width solid rgba(0, 0, 0, 0.0);
     z-index: 100;
     @include media-breakpoint-down-lg {
       display: block;
       text-align: center;
     }
     @include media-breakpoint-down-md {
-      padding-top: $base-padding * 3;
+      padding-top: $base-padding * 2;
     }
     @include media-breakpoint-down-sm {
-      padding-top: $base-padding * 4;
+      padding-top: $base-padding * 2;
     }
   }
   &-description {
     @include media-breakpoint-down-lg {
-      margin-bottom: $base-margin * 3;
+      margin-bottom: $base-margin * 1;
     }
 
     ul {
