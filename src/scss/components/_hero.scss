@@ -339,6 +339,7 @@
   &-three {
     background: url('/images/hero/hero-image-5.png');
     position: relative;
+    overflow-x: hidden;
     border-bottom: $color-black-medium;
     background-size: cover;
     background-position: center;
@@ -346,6 +347,7 @@
     height: auto;
     &-shape-wrapper {
       overflow: hidden;
+      overflow-x: hidden;
       bottom: 10%;
       .shape-1,
       .shape-2,

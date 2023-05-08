@@ -14347,6 +14347,7 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
 .hero-three {
   background: url("/images/hero/hero-image-5.png");
   position: relative;
+  overflow-x: hidden;
   border-bottom: #252e39;
   background-size: cover;
   background-position: center;
@@ -14355,6 +14356,7 @@ btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-pr
 }
 .hero-three-shape-wrapper {
   overflow: hidden;
+  overflow-x: hidden;
   bottom: 10%;
 }
 .hero-three-shape-wrapper .shape-1,
